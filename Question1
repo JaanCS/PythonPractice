@@ -1,0 +1,15 @@
+#Question1
+#Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will turn 100 years old.
+#Add on to the previous program by asking the user for another number and printing out that many copies of the previous message
+#Print out that many copies of the previous message on separate lines.
+
+Name = input("Tell me your name: ")
+Age = int(input("How old are you: "))
+Hundred = Name + ", you will be a hundred years old in the year " + str(2118 - Age)
+print(Hundred)
+num = int(input("Give me a random number between 1 and 10: "))
+repeat = num * Hundred
+print(repeat)
+repeat2 = num * ("\n" + Hundred)
+print(repeat2)
+
