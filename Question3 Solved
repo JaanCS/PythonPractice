@@ -5,4 +5,21 @@
 #Ask the user for a number and return a list that contains only elements from the original list a that are smaller than that number given by the user.
 
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+for elem in a:
+...if elem <5:print(elem)
+...else:pass
+
+b=[]
+for elem in a:
+...if elem<5:b.append(elem)
+...else:pass
+print(b)
+
+b=[]
+b=[elem for elem in a if elem<5]
+print(b)
+
+num = int(input("Give me a number and I will tell you which numbers in a are smaller: "))
+c=[elem for elem in a if elem<num]
+print(c)
   
