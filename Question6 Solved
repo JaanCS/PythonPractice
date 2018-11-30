@@ -1,3 +1,6 @@
 #Ask the user for a string and print out whether this string is a palindrome or not
 
 string = input("Give me a word and I'll tell you if it's a palindrome: ")
+rev = string[::-1]
+if string == rev: print("Your word is a palindrome")
+else:print("Your word is not a palindrome")
