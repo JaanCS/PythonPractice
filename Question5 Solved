@@ -13,3 +13,7 @@ d=[]
 for elem in b:
 ...if elem in d:pass
 ...elif elem in a: d.append(elem)
+
+e=[]
+e=[elem for elem in b if elem not in e if elem in a]
+print(e)
