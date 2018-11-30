@@ -2,3 +2,5 @@
 
 num = input("Give me a number and I'll present you with its divisors: ")
 x=range(1,(int(num)+1))
+d=[elem for elem in x if int(num)%elem ==0]
+print(d)
