@@ -7,21 +7,45 @@
 #Scissors beats paper
 #Paper beats rock
 
-intro="Let's play a game of Rock-Paper-Scissors, both of you will input your choice and I will tell you the result" 
-dec_1=input("Player1, tell me which of the three (rock/paper/scissors) is your choice: ")
-dec_2=input("Player2, tell me which of the three (rock/paper/scissors) is your choice: ")
+intro = "\nLet's play a game of Rock-Paper-Scissors, this game requires two players \neach player will input a choice and then I will tell you the result"
+result_p1 = "Player 1 is the winner"
+result_p2 = "Player 2 is the winner"
+result_tie = "The result is a tie"
+wrong_p1 = "That is not an option Player 1"
+wrong_p2 = "That is not an option Player 2"
+wrong_both = "Neither player entered a possible response"
+possible = ["rock", "paper", "scissors"]
+
 while True:
-...     print(intro)
-...     dec_1=input("Player1, tell me which of the three (rock/paper/scissors) is your choice: ")
-...     dec_2=input("Player2, tell me which of the three (rock/paper/scissors) is your choice: ")
-...     if dec_1 == dec_2: print("The result is a tie");break
-...     elif dec_1 == "rock" and dec_2== "paper":print("Player2 is the winner")
-...     elif dec_1 == "rock" and dec_2== "scissors":print("Player1 is the winner")
-...     elif dec_1 == "paper" and dec_2== "scissors":print("Player2 is the winner")
-...     elif dec_1 == "paper" and dec_2== "rock":print("Player1 is the winner")
-...     elif dec_1 == "scissors" and dec_2== "rock":print("Player2 is the winner")
-...     elif dec_1 == "scissors" and dec_2== "paper":print("Player1 is the winner")
-...     elif dec_1 not in ["rock","paper","scissors"] and dec_2 not in ["rock","paper","scissors"]: print("Not a possible choice")
-...     elif dec_1 not in ["rock","paper","scissors"]: print("Not a possible choice Player1")
-...     elif dec_2 not in ["rock","paper","scissors"]: print("Not a possible choice Player2")
-...     else:break
+    print(intro)
+    dec_1 = input(
+        "\nPlayer1, tell me which of the three (rock/paper/scissors) is your choice: ").lower()
+    dec_2 = input(
+        "\nPlayer2, tell me which of the three (rock/paper/scissors) is your choice: ").lower()
+    if dec_1 not in possible and dec_2 not in possible:
+        print(wrong_both)
+    elif dec_1 not in possible:
+        print(wrong_p1)
+    elif dec_2 not in possible:
+        print(wrong_p2)
+    elif dec_1 == dec_2:
+        print(result_tie)
+    elif dec_1 == "rock" and dec_2 == "paper":
+        print(result_p2)
+    elif dec_1 == "rock" and dec_2 == "scissors":
+        print(result_p1)
+    elif dec_1 == "paper" and dec_2 == "scissors":
+        print(result_p2)
+    elif dec_1 == "paper" and dec_2 == "rock":
+        print(result_p1)
+    elif dec_1 == "scissors" and dec_2 == "rock":
+        print(result_p2)
+    elif dec_1 == "scissors" and dec_2 == "paper":
+        print(result_p1)
+    again = input(
+        "\nWould you like to play again? Enter 'yes' if so: ").lower()
+    if again == "yes":
+        continue
+    else:
+        break
+
