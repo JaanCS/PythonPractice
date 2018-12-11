@@ -9,18 +9,24 @@ high = "Your guess was too high"
 low = "Your guess was too low"
 close = "You're close!"
 correct = "You got it right, congratulations!"
+finished = "If you want to exit the game, type 'exit' instead of guessing a number"
 x = rand.randint(1, 9)
 num = 0
 print(intro)
+print(finished)
 while True:
-    guess = int(input("Tell me your guess: "))
-    while guess != x:
-        if guess >= 15:
-            print(high)
-        elif guess <= -5:
-            print(low)
-        else:
-            print(close)
-    if guess == x:
+    guess = (input("\nTell me your guess: "))
+    if guess.lower() == "exit":
+        break
+    guess = int(guess)
+    num += 1
+    if guess >= 15:
+        print(high)
+    elif guess <= -5:
+        print(low)
+    elif guess != x:
+        print(close)
+    elif guess == x:
         print(correct)
-    break
+        print("It took you " + str(num) + " guesses to win")
+        break
