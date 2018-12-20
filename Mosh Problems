@@ -61,6 +61,16 @@ def show_stars(rows):
     for x in stars:
         print(x)
 
+#Write a function that prints all the prime numbers between 0 and limit 
 
+def num_prime(limit):
+    numbers = list(range(0, (limit+1)))
+    prime = []
+    for x in numbers:
+        y = list(range(1, (x+1)))
+        y = [x % y for y in y]
+        if y.count(0) == 2:
+            prime.append(x)
+    return prime
 
 
