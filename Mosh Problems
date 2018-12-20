@@ -72,5 +72,14 @@ def num_prime(limit):
         if y.count(0) == 2:
             prime.append(x)
     return prime
+    
+
+#FizzBuzz2
+
+def Fizz_Buzz(start, end):
+    fb = list(range(start, end+1))
+    fb = ["FizzBuzz" if x % 5 == 0 and x %
+          3 == 0 else "Buzz" if x % 5 == 0 else "Fizz" if x % 3 == 0 else x for x in fb]
+    return fb
 
 
