@@ -1,0 +1,19 @@
+# Ask the user for a number
+# determine whether the number is prime or not
+
+def get_integer():
+    return int(input("Give me a number and I'll tell you if it's prime: "))
+
+
+x = get_integer()
+
+
+def prime(number=x):
+    check = list(range(1, number+1))
+    check = [number % x for x in check]
+    if check.count(0) == 2:
+        return f"{number} is a prime number"
+    return f"{number} is not a prime number"
+
+
+print(prime())
