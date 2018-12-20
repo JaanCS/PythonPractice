@@ -26,12 +26,41 @@ def fizz_buzz(input):
 
 def driving(speed):
     limit = 70
-    points = (((speed - limit)//5) + ((speed-limit) %
-                                      5 > 0)) - 1 + ((speed-limit) % 5 == 0)
+    points = (((speed - limit)//5) + ((speed-limit) % 5 > 0)) - 1 + ((speed-limit) % 5 == 0))
     if speed <= 70:
         return "Ok"
     if points >= 12:
         return f"You have too many demerit points, license suspended"
     return f"You are over the speed limit, demerit points:{points}"
+
+#Write a function called showNumbers that takes a parameter called limit. 
+#It should print all the numbers between 0 and limit with a label to identify the even and odd numbers
+
+def showNumbers(limit):
+    numbers = list(range(0, (limit+1)))
+    numbers = ["EVEN" if x % 2 == 0 else "ODD" for x in numbers]
+    for index, numbers in enumerate(numbers):
+        print(index,numbers)
+
+#Write a function that returns the sum of multiples of 3 and 5 between 0 and limit 
+
+def sumnumbers(limit):
+    numbers = list(range(0, (limit+1)))
+    numbers = [x for x in numbers if x % 3 == 0 or x % 5 == 0]
+    print(sum(numbers))
+
+#Write a function called show_stars(rows)
+#If rows is 3, it should print the following:
+#*
+#**
+#***
+
+def show_stars(rows):
+    stars = list(range(0, (rows+1)))
+    stars = [("*"*x) for x in stars]
+    for x in stars:
+        print(x)
+
+
 
 
