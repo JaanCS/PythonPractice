@@ -9,10 +9,13 @@
 
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b=[1,2,3,4,5,6,7,8,9,10,11,12,13]
-d=[]
+c=[]
 for elem in b:
-...if elem in d:pass
-...elif elem in a: d.append(elem)
+    if elem in c:
+        c.remove(elem)
+    if elem in a:
+        c.append(elem)
+print(c)
 
 e=[]
 e=[elem for elem in b if elem not in e if elem in a]
