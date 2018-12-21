@@ -1,0 +1,13 @@
+#Write a program that takes a list of numbers 
+#make a new list of only 
+#the first and last elements of the given list
+
+
+def list_ends(*numbers):
+    list_num = list(numbers)
+    if any(isinstance(el, list) for el in list_num) == True:
+        list_num = [item for sublist in numbers for item in sublist]
+    ends = [list_num[0], list_num[-1]]
+    return ends
+
+
