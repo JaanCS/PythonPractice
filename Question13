@@ -1,0 +1,10 @@
+#Write a program that asks the user 
+#how many Fibonnaci numbers to generate
+#then generates them
+
+def fib(number):
+    list = list(range(0,number+1))
+    flist = []
+    for element in list:
+        
+    return flist 
