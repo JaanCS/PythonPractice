@@ -1,0 +1,20 @@
+# Write a program that asks the user for a
+# long string containing multiple words
+# Print back to the user the same string
+# except with the words in backwards order
+
+
+def get_phrase():
+    return input("In a sentence, tell me who the US President is:\n")
+
+
+sntc = get_phrase()
+
+
+def rev(stri=sntc):
+    if not isinstance(stri, str):
+        return f"You did not enter a phrase"
+    slist = list(stri.split())
+    slist.sort(reverse=True)
+    return " ".join(slist)
+
